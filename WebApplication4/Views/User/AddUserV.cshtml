@@ -1,0 +1,65 @@
+﻿@model WebApplication4.Models.UserModels
+
+@{
+    ViewBag.Title = "AddUserV";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AddUserV</h2>
+
+@*@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>UserModels</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Age, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Age, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Age, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.no, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.no, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.no, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+
+}*@
+
+
+@using (Html.BeginForm())
+{
+    @Html.EditorFor(x => x.A)
+    @Html.ValidationMessageFor(x => x.A)
+    @Html.EditorFor(x => x.B)
+    @*@Html.ValidationMessageFor(x => x.B)*@
+
+    @Html.DisplayFor(x => x.Result)
+
+    <input type="submit" value="Submit" />
+}
+<div>
+    @Html.ActionLink("Back to home", "Index", "Home")
+</div>

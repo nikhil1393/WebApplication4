@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/MyStyleSheet.css" rel="stylesheet" type="text/css" />
+    <title>@ViewBag.Title</title>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+</head>
+<body>
+    <div class="header">
+       </div>
+        
+     <div id="navcontainer">
+                <ul >
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("SiteMaster", "SiteMaster", "Master")</li>
+                    <li>@Html.ActionLink("About", "About", "Master")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Master")</li>
+                    <li>@Html.ActionLink("Create New User", "AddUserV", "User")</li>
+                 
+                </ul>
+            </div>
+    <div >
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+   
+</body>
+</html>
